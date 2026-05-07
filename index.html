@@ -14,7 +14,7 @@ const _m={name:"House Budget Tracker",short_name:"HouseTracker",start_url:"./",d
         {src:"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' fill='%230F1923'/%3E%3Ctext y='420' x='20' font-size='440'%3E%F0%9F%8F%A1%3C/text%3E%3C/svg%3E",sizes:"512x512",type:"image/svg+xml"}]};
 const _mb=new Blob([JSON.stringify(_m)],{type:"application/json"});
 const _ml=document.createElement("link");_ml.rel="manifest";_ml.href=URL.createObjectURL(_mb);document.head.appendChild(_ml);
-</script><link rel="manifest" href="blob:https://jbushehab-hub.github.io/897c1a08-e3ca-4ac1-b13f-e8f3044d4b0c"><link rel="manifest" href="blob:null/011bd9ae-db50-40be-aa5f-0385c7e65287"><link rel="manifest" href="blob:https://jbushehab-hub.github.io/ad6ef73e-5757-4be8-814e-975bd9d3ec2b"><link rel="manifest" href="blob:null/fd695ae9-75b7-4b8c-929c-3691a55578b1">
+</script><link rel="manifest" href="blob:https://jbushehab-hub.github.io/af5afaa9-8099-4c93-8e68-be4e810e69f5"><link rel="manifest" href="blob:null/011bd9ae-db50-40be-aa5f-0385c7e65287"><link rel="manifest" href="blob:https://jbushehab-hub.github.io/ad6ef73e-5757-4be8-814e-975bd9d3ec2b"><link rel="manifest" href="blob:null/fd695ae9-75b7-4b8c-929c-3691a55578b1">
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&amp;family=Nunito+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
 <style>
 /* ── CSS Variables: Dark & Light Mode ── */
@@ -8830,8 +8830,8 @@ ReactDOM.createRoot(document.getElementById("screen")).render( /*#__PURE__*/Reac
 <div id="topbar">
   <div style="display:flex;align-items:center;gap:8px;">
     <button id="pg-topbar-btn" onclick="pg_openProfileMenu()" style="display:flex;align-items:center;gap:6px;background:var(--cardH);border:1px solid var(--bo);border-radius:20px;padding:4px 10px 4px 6px;cursor:pointer;font-family:'Nunito Sans',sans-serif;">
-      <span id="pg-topbar-avatar" style="font-size:18px;line-height:1;">👤</span>
-      <span id="pg-topbar-name" style="font-size:11px;font-weight:700;color:var(--tx);max-width:70px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;"></span>
+      <span id="pg-topbar-avatar" style="font-size:18px;line-height:1;">👩</span>
+      <span id="pg-topbar-name" style="font-size:11px;font-weight:700;color:var(--tx);max-width:70px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">aua</span>
     </button>
     <div id="tbl" style="font-size:11px;font-weight:700;color:#F0A500;letter-spacing:3px;text-transform:uppercase;"> Overview</div>
   </div>
@@ -8856,14 +8856,32 @@ ReactDOM.createRoot(document.getElementById("screen")).render( /*#__PURE__*/Reac
 <!-- BOTTOM NAV -->
 
 <!-- ══ PROFILE GATE ══ -->
-<div id="profileGate">
+<div id="profileGate" class="hidden">
   <div class="pg-logo">🏡</div>
   <div class="pg-title">House Budget</div>
   <div class="pg-sub">Select your profile to continue</div>
-  <div id="pg-content" style="width:100%;max-width:400px;"><div style="text-align:center;padding:60px 20px;">
-      <div style="font-size:36px;margin-bottom:16px;">🏠</div>
-      <div style="font-size:14px;font-weight:700;color:var(--tx);margin-bottom:8px;">Loading profiles…</div>
-      <div style="font-size:12px;color:var(--mu);">Fetching from: house-budget-c64c1-default-rtdb.asia-southeast1.firebasedatabase.app</div>
+  <div id="pg-content" style="width:100%;max-width:400px;"><div class="pg-card"><div class="pg-section">Select Profile</div><div class="pg-profile-row" onclick="pg_selectProfile('p1777838493083')">
+          <div class="pg-avatar" style="background:#F0A50022;">👨</div>
+          <div class="pg-name">Jassim</div>
+          <div class="pg-arrow">›</div>
+        </div><div class="pg-profile-row" onclick="pg_selectProfile('p1778156654861')">
+          <div class="pg-avatar" style="background:#F0A50022;">👩</div>
+          <div class="pg-name">aua</div>
+          <div class="pg-arrow">›</div>
+        </div></div>
+    <div class="pg-card">
+      <div class="pg-section">New Profile</div>
+      <input class="pg-input" id="pg-new-name" type="text" placeholder="Your name" maxlength="24">
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;" id="pg-avatar-picker">
+        <button onclick="pg_pickAvatar(0)" id="pga_0" style="background: var(--cardH); border-color: rgb(240, 165, 0); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-radius: 10px; padding: 6px 8px; font-size: 20px; cursor: pointer; transition: border-color 0.15s;">👤</button><button onclick="pg_pickAvatar(1)" id="pga_1" style="background: var(--cardH); border-color: var(--bo); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-radius: 10px; padding: 6px 8px; font-size: 20px; cursor: pointer; transition: border-color 0.15s;">👨</button><button onclick="pg_pickAvatar(2)" id="pga_2" style="background: var(--cardH); border-color: var(--bo); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-radius: 10px; padding: 6px 8px; font-size: 20px; cursor: pointer; transition: border-color 0.15s;">👩</button><button onclick="pg_pickAvatar(3)" id="pga_3" style="background: var(--cardH); border-color: var(--bo); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-radius: 10px; padding: 6px 8px; font-size: 20px; cursor: pointer; transition: border-color 0.15s;">👨‍💼</button><button onclick="pg_pickAvatar(4)" id="pga_4" style="background: var(--cardH); border-color: var(--bo); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-radius: 10px; padding: 6px 8px; font-size: 20px; cursor: pointer; transition: border-color 0.15s;">👩‍💼</button><button onclick="pg_pickAvatar(5)" id="pga_5" style="background: var(--cardH); border-color: var(--bo); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-radius: 10px; padding: 6px 8px; font-size: 20px; cursor: pointer; transition: border-color 0.15s;">🧑</button><button onclick="pg_pickAvatar(6)" id="pga_6" style="background: var(--cardH); border-color: var(--bo); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-radius: 10px; padding: 6px 8px; font-size: 20px; cursor: pointer; transition: border-color 0.15s;">👴</button><button onclick="pg_pickAvatar(7)" id="pga_7" style="background: var(--cardH); border-color: var(--bo); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-radius: 10px; padding: 6px 8px; font-size: 20px; cursor: pointer; transition: border-color 0.15s;">👵</button><button onclick="pg_pickAvatar(8)" id="pga_8" style="background: var(--cardH); border-color: var(--bo); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-radius: 10px; padding: 6px 8px; font-size: 20px; cursor: pointer; transition: border-color 0.15s;">🧔</button><button onclick="pg_pickAvatar(9)" id="pga_9" style="background: var(--cardH); border-color: var(--bo); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-radius: 10px; padding: 6px 8px; font-size: 20px; cursor: pointer; transition: border-color 0.15s;">👱</button>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;" id="pg-color-picker">
+        <button onclick="pg_pickColor(0)" id="pgc_0" style="width: 28px; height: 28px; border-radius: 50%; background: rgb(240, 165, 0); border: 3px solid rgb(255, 255, 255); cursor: pointer; transition: border-color 0.15s;"></button><button onclick="pg_pickColor(1)" id="pgc_1" style="width:28px;height:28px;border-radius:50%;background:#2ECC71;border:3px solid transparent;cursor:pointer;transition:border-color .15s;"></button><button onclick="pg_pickColor(2)" id="pgc_2" style="width:28px;height:28px;border-radius:50%;background:#3498DB;border:3px solid transparent;cursor:pointer;transition:border-color .15s;"></button><button onclick="pg_pickColor(3)" id="pgc_3" style="width:28px;height:28px;border-radius:50%;background:#E74C3C;border:3px solid transparent;cursor:pointer;transition:border-color .15s;"></button><button onclick="pg_pickColor(4)" id="pgc_4" style="width:28px;height:28px;border-radius:50%;background:#9B59B6;border:3px solid transparent;cursor:pointer;transition:border-color .15s;"></button><button onclick="pg_pickColor(5)" id="pgc_5" style="width:28px;height:28px;border-radius:50%;background:#1ABC9C;border:3px solid transparent;cursor:pointer;transition:border-color .15s;"></button><button onclick="pg_pickColor(6)" id="pgc_6" style="width:28px;height:28px;border-radius:50%;background:#E67E22;border:3px solid transparent;cursor:pointer;transition:border-color .15s;"></button><button onclick="pg_pickColor(7)" id="pgc_7" style="width:28px;height:28px;border-radius:50%;background:#F39C12;border:3px solid transparent;cursor:pointer;transition:border-color .15s;"></button>
+      </div>
+      <button class="pg-btn pg-btn-primary" onclick="pg_createProfile()">Create Profile</button>
+    </div>
+    <div style="text-align:center;padding:8px 0 4px;">
+      <button onclick="window._forceRefreshProfiles()" style="background:none;border:none;font-size:11px;color:var(--mu);cursor:pointer;text-decoration:underline;">🔄 Refresh profiles from cloud</button>
     </div></div>
   <div style="width:100%;max-width:400px;margin-top:8px;display:flex;gap:8px;">
     <button onclick="openShare()" style="flex:1;background:var(--cardH);border:1px solid var(--bo);border-radius:16px;padding:13px;font-size:13px;font-weight:800;color:var(--mu);cursor:pointer;font-family:'Nunito Sans',sans-serif;display:flex;align-items:center;justify-content:center;gap:8px;">
@@ -8880,10 +8898,10 @@ ReactDOM.createRoot(document.getElementById("screen")).render( /*#__PURE__*/Reac
 <div id="pg-admin-overlay" style="display:none;position:fixed;inset:0;z-index:1200;background:var(--bg);overflow-y:auto;padding:20px 16px;padding-top:calc(20px + env(safe-area-inset-top,0px));padding-bottom:calc(20px + env(safe-area-inset-bottom,0px));">
   <div id="pg-admin-content" style="max-width:420px;margin:0 auto;"></div>
 </div>
-<div id="pg-menu-overlay" onclick="pg_closeProfileMenu()" style="display:none;position:fixed;inset:0;z-index:1200;background:#00000077;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);">
+<div id="pg-menu-overlay" onclick="pg_closeProfileMenu()" style="display: none; position: fixed; inset: 0px; z-index: 1200; background: rgba(0, 0, 0, 0.467); backdrop-filter: blur(4px);">
   <div onclick="event.stopPropagation()" style="position:absolute;bottom:0;left:0;right:0;background:var(--topbar);border-radius:22px 22px 0 0;padding:20px 16px;padding-bottom:calc(24px + env(safe-area-inset-bottom,0px));max-width:500px;margin:0 auto;border:1px solid var(--bo);border-bottom:none;">
     <div style="width:34px;height:4px;background:var(--bo);border-radius:99px;margin:0 auto 16px;"></div>
-    <div id="pg-menu-name" style="font-size:14px;font-weight:800;color:var(--tx);font-family:Nunito,sans-serif;text-align:center;margin-bottom:4px;"></div>
+    <div id="pg-menu-name" style="font-size:14px;font-weight:800;color:var(--tx);font-family:Nunito,sans-serif;text-align:center;margin-bottom:4px;">👩 aua</div>
     <div style="font-size:11px;color:var(--mu);text-align:center;margin-bottom:18px;">Logged in</div>
     <button onclick="pg_closeProfileMenu();pg_switchProfile();" style="width:100%;background:var(--cardH);border:1px solid var(--bo);border-radius:14px;padding:14px;margin-bottom:10px;font-size:13px;font-weight:800;color:var(--tx);cursor:pointer;font-family:'Nunito Sans',sans-serif;display:flex;align-items:center;gap:10px;">
       <span style="font-size:18px;">🔄</span> Switch Profile
@@ -8899,7 +8917,7 @@ ReactDOM.createRoot(document.getElementById("screen")).render( /*#__PURE__*/Reac
 <nav id="bottomnav"><button class="nb on" style="flex: 1 1 0%; display: flex; flex-direction: column; align-items: center; gap: 2px; background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; padding: 0px 4px; cursor: pointer;"><span class="ni">📊</span><span class="nl" style="color:#F0A500">Overview</span><div class="nd"></div></button><button class="nb" style="flex: 1 1 0%; display: flex; flex-direction: column; align-items: center; gap: 2px; background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; padding: 0px 4px; cursor: pointer;"><span class="ni">💰</span><span class="nl" style="color:#7F8C8D">Spending</span></button><button class="nb" style="flex: 1 1 0%; display: flex; flex-direction: column; align-items: center; gap: 2px; background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; padding: 0px 4px; cursor: pointer;"><span class="ni">📋</span><span class="nl" style="color:#7F8C8D">Payments</span></button><button class="nb" style="flex: 1 1 0%; display: flex; flex-direction: column; align-items: center; gap: 2px; background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; padding: 0px 4px; cursor: pointer;"><span class="ni">🏦</span><span class="nl" style="color:#7F8C8D">Funds</span></button></nav>
 
 <!-- INSTALL BANNER -->
-<div id="ibanner" style="display: block;">
+<div id="ibanner">
   <div style="display:flex;justify-content:space-between;align-items:center;">
     <div><div style="font-size:13px;font-weight:800;color:#F0A500;font-family:Nunito,sans-serif;">Install App</div>
     <div style="font-size:11px;color:#7F8C8D;margin-top:2px;">Add to home screen for offline use</div></div>
@@ -9135,7 +9153,7 @@ ReactDOM.createRoot(document.getElementById("screen")).render( /*#__PURE__*/Reac
           <div style="font-size:16px;font-weight:900;color:#ECF0F1;font-family:Nunito,sans-serif;margin-bottom:6px;">Publishing to GitHub Pages…</div>
           <div style="font-size:12px;color:#7F8C8D;line-height:1.6;" id="sb-loading-msg">Creating repo &amp; uploading your app. Takes ~20 seconds.</div>
           <div style="margin:20px auto 0;width:200px;height:5px;background:#243447;border-radius:99px;overflow:hidden;">
-            <div id="sb-progress-bar" style="height: 100%; width: 19.3617%; background: linear-gradient(90deg, rgb(0, 199, 183), rgb(0, 173, 159)); border-radius: 99px; transition: width 0.4s;"></div>
+            <div id="sb-progress-bar" style="height: 100%; width: 26.3121%; background: linear-gradient(90deg, rgb(0, 199, 183), rgb(0, 173, 159)); border-radius: 99px; transition: width 0.4s;"></div>
           </div>
         </div>
       </div>
