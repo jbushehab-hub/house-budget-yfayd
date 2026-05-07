@@ -14,7 +14,7 @@ const _m={name:"House Budget Tracker",short_name:"HouseTracker",start_url:"./",d
         {src:"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' fill='%230F1923'/%3E%3Ctext y='420' x='20' font-size='440'%3E%F0%9F%8F%A1%3C/text%3E%3C/svg%3E",sizes:"512x512",type:"image/svg+xml"}]};
 const _mb=new Blob([JSON.stringify(_m)],{type:"application/json"});
 const _ml=document.createElement("link");_ml.rel="manifest";_ml.href=URL.createObjectURL(_mb);document.head.appendChild(_ml);
-</script><link rel="manifest" href="blob:https://jbushehab-hub.github.io/4212a3a0-d284-4f8e-8f58-96c218a3d9b2"><link rel="manifest" href="blob:null/574fec29-29f2-41ea-8400-8e2f80dbc343"><link rel="manifest" href="blob:https://jbushehab-hub.github.io/ad6ef73e-5757-4be8-814e-975bd9d3ec2b"><link rel="manifest" href="blob:null/fd695ae9-75b7-4b8c-929c-3691a55578b1">
+</script><link rel="manifest" href="blob:https://jbushehab-hub.github.io/897c1a08-e3ca-4ac1-b13f-e8f3044d4b0c"><link rel="manifest" href="blob:null/011bd9ae-db50-40be-aa5f-0385c7e65287"><link rel="manifest" href="blob:https://jbushehab-hub.github.io/ad6ef73e-5757-4be8-814e-975bd9d3ec2b"><link rel="manifest" href="blob:null/fd695ae9-75b7-4b8c-929c-3691a55578b1">
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&amp;family=Nunito+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
 <style>
 /* ── CSS Variables: Dark & Light Mode ── */
@@ -8830,8 +8830,8 @@ ReactDOM.createRoot(document.getElementById("screen")).render( /*#__PURE__*/Reac
 <div id="topbar">
   <div style="display:flex;align-items:center;gap:8px;">
     <button id="pg-topbar-btn" onclick="pg_openProfileMenu()" style="display:flex;align-items:center;gap:6px;background:var(--cardH);border:1px solid var(--bo);border-radius:20px;padding:4px 10px 4px 6px;cursor:pointer;font-family:'Nunito Sans',sans-serif;">
-      <span id="pg-topbar-avatar" style="font-size:18px;line-height:1;">👨</span>
-      <span id="pg-topbar-name" style="font-size:11px;font-weight:700;color:var(--tx);max-width:70px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">Jassim BuShehab</span>
+      <span id="pg-topbar-avatar" style="font-size:18px;line-height:1;">👤</span>
+      <span id="pg-topbar-name" style="font-size:11px;font-weight:700;color:var(--tx);max-width:70px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;"></span>
     </button>
     <div id="tbl" style="font-size:11px;font-weight:700;color:#F0A500;letter-spacing:3px;text-transform:uppercase;"> Overview</div>
   </div>
@@ -8856,25 +8856,15 @@ ReactDOM.createRoot(document.getElementById("screen")).render( /*#__PURE__*/Reac
 <!-- BOTTOM NAV -->
 
 <!-- ══ PROFILE GATE ══ -->
-<div id="profileGate" class="hidden">
+<div id="profileGate">
   <div class="pg-logo">🏡</div>
   <div class="pg-title">House Budget</div>
   <div class="pg-sub">Select your profile to continue</div>
-  <div id="pg-content" style="width:100%;max-width:400px;">
-      <div class="pg-card" style="text-align:center;">
-        <div style="font-size:36px;margin-bottom:4px;">👨</div>
-        <div style="font-size:16px;font-weight:800;color:var(--tx);margin-bottom:4px;">Jassim BuShehab</div>
-        <div style="font-size:12px;color:var(--mu);margin-bottom:18px;">Enter PIN to unlock</div>
-        <div class="pg-pin-row" id="pg-pin-dots">
-          <div class="pg-pin-dot filled" id="pgd_0"></div><div class="pg-pin-dot filled" id="pgd_1"></div><div class="pg-pin-dot filled" id="pgd_2"></div><div class="pg-pin-dot filled" id="pgd_3"></div>
-        </div>
-        <div id="pg-pin-err" class="pg-err" style="display:none;"></div>
-        <div class="pg-numpad">
-          <button class="pg-num" onclick="pg_numpad('1')">1</button><button class="pg-num" onclick="pg_numpad('2')">2</button><button class="pg-num" onclick="pg_numpad('3')">3</button><button class="pg-num" onclick="pg_numpad('4')">4</button><button class="pg-num" onclick="pg_numpad('5')">5</button><button class="pg-num" onclick="pg_numpad('6')">6</button><button class="pg-num" onclick="pg_numpad('7')">7</button><button class="pg-num" onclick="pg_numpad('8')">8</button><button class="pg-num" onclick="pg_numpad('9')">9</button><button class="pg-num" onclick="pg_numpad('')"></button><button class="pg-num" onclick="pg_numpad('0')">0</button><button class="pg-num del" onclick="pg_numpad('⌫')">⌫</button>
-        </div>
-        
-        <button class="pg-btn pg-btn-secondary" style="margin-top:6px;" onclick="pg_back()">← Back</button>
-      </div></div>
+  <div id="pg-content" style="width:100%;max-width:400px;"><div style="text-align:center;padding:60px 20px;">
+      <div style="font-size:36px;margin-bottom:16px;">🏠</div>
+      <div style="font-size:14px;font-weight:700;color:var(--tx);margin-bottom:8px;">Loading profiles…</div>
+      <div style="font-size:12px;color:var(--mu);">Fetching from: house-budget-c64c1-default-rtdb.asia-southeast1.firebasedatabase.app</div>
+    </div></div>
   <div style="width:100%;max-width:400px;margin-top:8px;display:flex;gap:8px;">
     <button onclick="openShare()" style="flex:1;background:var(--cardH);border:1px solid var(--bo);border-radius:16px;padding:13px;font-size:13px;font-weight:800;color:var(--mu);cursor:pointer;font-family:'Nunito Sans',sans-serif;display:flex;align-items:center;justify-content:center;gap:8px;">
       <span style="font-size:16px;">📤</span> Share App
@@ -8909,7 +8899,7 @@ ReactDOM.createRoot(document.getElementById("screen")).render( /*#__PURE__*/Reac
 <nav id="bottomnav"><button class="nb on" style="flex: 1 1 0%; display: flex; flex-direction: column; align-items: center; gap: 2px; background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; padding: 0px 4px; cursor: pointer;"><span class="ni">📊</span><span class="nl" style="color:#F0A500">Overview</span><div class="nd"></div></button><button class="nb" style="flex: 1 1 0%; display: flex; flex-direction: column; align-items: center; gap: 2px; background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; padding: 0px 4px; cursor: pointer;"><span class="ni">💰</span><span class="nl" style="color:#7F8C8D">Spending</span></button><button class="nb" style="flex: 1 1 0%; display: flex; flex-direction: column; align-items: center; gap: 2px; background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; padding: 0px 4px; cursor: pointer;"><span class="ni">📋</span><span class="nl" style="color:#7F8C8D">Payments</span></button><button class="nb" style="flex: 1 1 0%; display: flex; flex-direction: column; align-items: center; gap: 2px; background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; padding: 0px 4px; cursor: pointer;"><span class="ni">🏦</span><span class="nl" style="color:#7F8C8D">Funds</span></button></nav>
 
 <!-- INSTALL BANNER -->
-<div id="ibanner">
+<div id="ibanner" style="display: block;">
   <div style="display:flex;justify-content:space-between;align-items:center;">
     <div><div style="font-size:13px;font-weight:800;color:#F0A500;font-family:Nunito,sans-serif;">Install App</div>
     <div style="font-size:11px;color:#7F8C8D;margin-top:2px;">Add to home screen for offline use</div></div>
@@ -9130,7 +9120,7 @@ ReactDOM.createRoot(document.getElementById("screen")).render( /*#__PURE__*/Reac
             <div style="font-size:13px;font-weight:800;color:#ECF0F1;">Paste your token below</div>
           </div>
           <div style="font-size:10px;font-weight:700;color:#7F8C8D;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">GitHub Personal Access Token</div>
-          <input id="inp-netlify-token" type="password" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" style="width:100%;background:#0F1923;border:1px solid #243447;border-radius:10px;padding:11px 14px;color:#ECF0F1;font-size:13px;font-family:'Nunito Sans',sans-serif;outline:none;margin-bottom:4px;">
+          <input id="inp-netlify-token" type="text" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" style="width:100%;background:#0F1923;border:1px solid #243447;border-radius:10px;padding:11px 14px;color:#ECF0F1;font-size:13px;font-family:'Nunito Sans',sans-serif;outline:none;margin-bottom:4px;">
           <div style="font-size:10px;color:#7F8C8D;">Saved locally — only sent to GitHub's API to publish your app.</div>
         </div>
 
@@ -9145,7 +9135,7 @@ ReactDOM.createRoot(document.getElementById("screen")).render( /*#__PURE__*/Reac
           <div style="font-size:16px;font-weight:900;color:#ECF0F1;font-family:Nunito,sans-serif;margin-bottom:6px;">Publishing to GitHub Pages…</div>
           <div style="font-size:12px;color:#7F8C8D;line-height:1.6;" id="sb-loading-msg">Creating repo &amp; uploading your app. Takes ~20 seconds.</div>
           <div style="margin:20px auto 0;width:200px;height:5px;background:#243447;border-radius:99px;overflow:hidden;">
-            <div id="sb-progress-bar" style="height: 100%; width: 35%; background: linear-gradient(90deg, rgb(0, 199, 183), rgb(0, 173, 159)); border-radius: 99px; transition: width 0.4s;"></div>
+            <div id="sb-progress-bar" style="height: 100%; width: 19.3617%; background: linear-gradient(90deg, rgb(0, 199, 183), rgb(0, 173, 159)); border-radius: 99px; transition: width 0.4s;"></div>
           </div>
         </div>
       </div>
@@ -10144,8 +10134,13 @@ function downloadHtmlFile() {
 }
 
 /* GitHub Pages token management */
+const _DEFAULT_GITHUB_TOKEN = "";
 function _getGitHubCfg() {
-  try { return JSON.parse(localStorage.getItem("hbt_github") || "null"); } catch(e) { return null; }
+  try {
+    const saved = JSON.parse(localStorage.getItem("hbt_github") || "null");
+    if (saved) return saved;
+    return { token: _DEFAULT_GITHUB_TOKEN };
+  } catch(e) { return { token: _DEFAULT_GITHUB_TOKEN }; }
 }
 function openGitHubPanel() {
   document.getElementById("share-main").style.display = "none";
@@ -10213,40 +10208,103 @@ async function startGitHubDeploy() {
     _animProgress(35, 1000);
 
     /* Step 2: Create or verify repo */
-    let repoName = cfg.repoName || ("house-budget-" + Math.random().toString(36).slice(2, 7));
+    let repoName = cfg.repoName || "";
     let repoExists = false;
-    if (cfg.repoName) {
+
+    /* If we have a saved repoName, verify it still exists */
+    if (repoName) {
       const chk = await fetch("https://api.github.com/repos/" + username + "/" + repoName, { headers });
       repoExists = chk.ok;
     }
+
+    /* No saved repo — search user's existing repos for a house-budget-* one */
     if (!repoExists) {
+      try {
+        const listResp = await fetch("https://api.github.com/user/repos?per_page=100&type=owner", { headers });
+        if (listResp.ok) {
+          const repos = await listResp.json();
+          const existing = repos.find(r => r.name && r.name.startsWith("house-budget-"));
+          if (existing) { repoName = existing.name; repoExists = true; }
+        }
+      } catch(e2) {}
+    }
+
+    /* Still no repo — create a new one */
+    if (!repoExists) {
+      repoName = repoName || ("house-budget-" + Math.random().toString(36).slice(2, 7));
       const repoResp = await fetch("https://api.github.com/user/repos", {
         method: "POST", headers,
         body: JSON.stringify({ name: repoName, private: false, auto_init: true, description: "House Building Budget Tracker" })
       });
-      if (!repoResp.ok) throw new Error("Could not create repo (" + repoResp.status + ").");
-      await new Promise(r => setTimeout(r, 2000)); // wait for GitHub to init
+      if (!repoResp.ok) throw new Error("Could not create repo (" + repoResp.status + "). Make sure token has 'repo' scope.");
+      await new Promise(r => setTimeout(r, 2000));
     }
     cfg.repoName = repoName;
     localStorage.setItem("hbt_github", JSON.stringify(cfg));
 
     _animProgress(55, 1200);
 
-    /* Step 3: Upload index.html (base64 encoded) */
-    const html = document.documentElement.outerHTML;
-    const b64 = btoa(unescape(encodeURIComponent(html)));
+    /* Step 3: Upload index.html via Git Data API (avoids SHA conflicts) */
+    let html = document.documentElement.outerHTML;
 
-    // Check if file already exists (need SHA to update)
-    let sha = undefined;
-    const existResp = await fetch("https://api.github.com/repos/" + username + "/" + repoName + "/contents/index.html", { headers });
-    if (existResp.ok) { const existData = await existResp.json(); sha = existData.sha; }
+    /* Strip hardcoded token before uploading — GitHub secret scanning blocks pushes with live tokens */
+    html = html.replace(/_DEFAULT_GITHUB_TOKEN\s*=\s*["'][^"']*["']/g, '_DEFAULT_GITHUB_TOKEN = ""');
 
-    const fileBody = { message: "Update House Budget Tracker", content: b64 };
-    if (sha) fileBody.sha = sha;
-    const uploadResp = await fetch("https://api.github.com/repos/" + username + "/" + repoName + "/contents/index.html", {
-      method: "PUT", headers, body: JSON.stringify(fileBody)
+    /* Robust base64 for large/Unicode content — chunked to avoid stack overflow */
+    function _htmlToBase64(str) {
+      const bytes = new TextEncoder().encode(str);
+      let binary = "";
+      const CHUNK = 0x8000;
+      for (let i = 0; i < bytes.length; i += CHUNK) {
+        binary += String.fromCharCode.apply(null, bytes.subarray(i, i + CHUNK));
+      }
+      return btoa(binary);
+    }
+    const b64 = _htmlToBase64(html);
+
+    const apiBase = "https://api.github.com/repos/" + username + "/" + repoName;
+
+    /* 3a — get current HEAD commit & tree */
+    const refResp = await fetch(apiBase + "/git/ref/heads/main", { headers });
+    if (!refResp.ok) throw new Error("Could not read repo ref (" + refResp.status + ").");
+    const refData = await refResp.json();
+    const headSha = refData.object.sha;
+
+    const commitResp = await fetch(apiBase + "/git/commits/" + headSha, { headers });
+    if (!commitResp.ok) throw new Error("Could not read commit (" + commitResp.status + ").");
+    const commitData = await commitResp.json();
+    const treeSha = commitData.tree.sha;
+
+    /* 3b — create blob with base64 encoding */
+    const blobResp = await fetch(apiBase + "/git/blobs", {
+      method: "POST", headers,
+      body: JSON.stringify({ content: b64, encoding: "base64" })
     });
-    if (!uploadResp.ok) throw new Error("File upload failed (" + uploadResp.status + ").");
+    if (!blobResp.ok) throw new Error("Blob creation failed (" + blobResp.status + ").");
+    const blobSha = (await blobResp.json()).sha;
+
+    /* 3c — create tree */
+    const treeResp = await fetch(apiBase + "/git/trees", {
+      method: "POST", headers,
+      body: JSON.stringify({ base_tree: treeSha, tree: [{ path: "index.html", mode: "100644", type: "blob", sha: blobSha }] })
+    });
+    if (!treeResp.ok) throw new Error("Tree creation failed (" + treeResp.status + ").");
+    const newTreeSha = (await treeResp.json()).sha;
+
+    /* 3d — create commit */
+    const newCommitResp = await fetch(apiBase + "/git/commits", {
+      method: "POST", headers,
+      body: JSON.stringify({ message: "Update House Budget Tracker", tree: newTreeSha, parents: [headSha] })
+    });
+    if (!newCommitResp.ok) throw new Error("Commit creation failed (" + newCommitResp.status + ").");
+    const newCommitSha = (await newCommitResp.json()).sha;
+
+    /* 3e — update branch ref */
+    const updateRefResp = await fetch(apiBase + "/git/refs/heads/main", {
+      method: "PATCH", headers,
+      body: JSON.stringify({ sha: newCommitSha, force: true })
+    });
+    if (!updateRefResp.ok) throw new Error("Ref update failed (" + updateRefResp.status + ").");
 
     _animProgress(80, 1000);
 
@@ -10886,12 +10944,58 @@ document.addEventListener("keydown", e => {
     return h.toString(16);
   }
 
-  function getProfiles(){
-    try{return JSON.parse(localStorage.getItem("hbt_profiles")||"[]");}catch(e){return [];}
+  /* ── Profile Firebase sync — Firebase is the ONLY store ── */
+  const _PROF_DEFAULT_DB="https://house-budget-c64c1-default-rtdb.asia-southeast1.firebasedatabase.app";
+  const _PROF_DEFAULT_ROOM="Jassim2026";
+
+  function _getProfUrl(){
+    try{
+      const cfg=JSON.parse(localStorage.getItem("hbt_sync_cfg")||"null");
+      const db=(cfg&&cfg.dbUrl)||_PROF_DEFAULT_DB;
+      const room=(cfg&&cfg.room)||_PROF_DEFAULT_ROOM;
+      return db.replace(/\/+$/,"")+"/rooms/"+room+"/profiles.json";
+    }catch(e){
+      return _PROF_DEFAULT_DB+"/rooms/"+_PROF_DEFAULT_ROOM+"/profiles.json";
+    }
   }
-  function saveProfiles(list){
-    try{localStorage.setItem("hbt_profiles",JSON.stringify(list));}catch(e){}
+
+  /* In-memory cache only — never trust localStorage for profiles */
+  let _profilesCache=[];
+
+  function getProfiles(){ return _profilesCache; }
+
+  async function saveProfiles(list){
+    _profilesCache=list;
+    try{
+      await fetch(_getProfUrl(),{method:"PUT",headers:{"Content-Type":"application/json"},body:JSON.stringify(list)});
+    }catch(e){}
   }
+
+  function _pushProfilesToFirebase(list){
+    _profilesCache=list;
+    try{
+      fetch(_getProfUrl(),{method:"PUT",headers:{"Content-Type":"application/json"},body:JSON.stringify(list)}).catch(()=>{});
+    }catch(e){}
+  }
+
+  async function _loadProfilesFromFirebase(){
+    try{
+      const res=await fetch(_getProfUrl()+"?t="+Date.now());
+      if(res.ok){
+        const data=await res.json();
+        if(Array.isArray(data)) _profilesCache=data;
+        else _profilesCache=[];
+      }
+    }catch(e){
+      /* Offline fallback — try localStorage */
+      try{const v=localStorage.getItem("hbt_profiles"); if(v) _profilesCache=JSON.parse(v);}catch(e2){}
+    }
+    /* Keep localStorage in sync as offline backup */
+    try{localStorage.setItem("hbt_profiles",JSON.stringify(_profilesCache));}catch(e){}
+  }
+
+  /* Legacy alias */
+  async function _fetchAndMergeProfilesFromCloud(){ await _loadProfilesFromFirebase(); }
   function getProfileData(id){
     const keys=["hbt_cats","hbt_exp","hbt_lang","hbt_budget","hbt_noh","hbt_funds","hbt_sync_cfg","hbt_theme"];
     const data={};
@@ -10920,7 +11024,21 @@ document.addEventListener("keydown", e => {
   let _pinTarget=null; /* {mode:"verify"|"set", profileId, resolve} */
 
   /* ── render helpers ── */
+  window._forceRefreshProfiles=async function(){
+    content.innerHTML=`<div style="text-align:center;padding:60px 20px;"><div style="font-size:36px;margin-bottom:16px;">🔄</div><div style="font-size:14px;font-weight:700;color:var(--tx);">Refreshing…</div></div>`;
+    await _loadProfilesFromFirebase();
+    _renderProfileListUI();
+  };
+
   function renderProfileList(){
+    /* Render immediately from local storage — don't wait for network */
+    _renderProfileListUI();
+    /* Sync from Firebase in background, then re-render if anything changed */
+    _fetchAndMergeProfilesFromCloud().then(()=>_renderProfileListUI()).catch(()=>{});
+  }
+  window.renderProfileList = renderProfileList;
+
+  function _renderProfileListUI(){
     const profiles=getProfiles();
     let html=`<div class="pg-card">`;
     if(profiles.length){
@@ -10946,6 +11064,9 @@ document.addEventListener("keydown", e => {
         ${COLORS.map((c,i)=>`<button onclick="pg_pickColor(${i})" id="pgc_${i}" style="width:28px;height:28px;border-radius:50%;background:${c};border:3px solid transparent;cursor:pointer;transition:border-color .15s;"></button>`).join("")}
       </div>
       <button class="pg-btn pg-btn-primary" onclick="pg_createProfile()">Create Profile</button>
+    </div>
+    <div style="text-align:center;padding:8px 0 4px;">
+      <button onclick="window._forceRefreshProfiles()" style="background:none;border:none;font-size:11px;color:var(--mu);cursor:pointer;text-decoration:underline;">🔄 Refresh profiles from cloud</button>
     </div>`;
     content.innerHTML=html;
     pg_pickAvatar(0);
@@ -10984,15 +11105,19 @@ document.addEventListener("keydown", e => {
     </div>`;
   };
 
-  function renderSetPin(profileId,required){
+  function renderSetPin(profileId,required,isNewDevice){
     const profiles=getProfiles();
     const profile=profiles.find(p=>p.id===profileId);
     _pinBuffer="";
+    const subtitle = isNewDevice
+      ? "⚠️ Set a PIN for this device to unlock"
+      : required ? "Enter PIN to unlock" : "Set a PIN for this profile (optional)";
+    _pinTarget={mode: (required && !isNewDevice) ? "verify" : "set", profileId};
     content.innerHTML=`
       <div class="pg-card" style="text-align:center;">
         <div style="font-size:36px;margin-bottom:4px;">${profile?.avatar||"👤"}</div>
         <div style="font-size:16px;font-weight:800;color:var(--tx);margin-bottom:4px;">${profile?.name||""}</div>
-        <div style="font-size:12px;color:var(--mu);margin-bottom:18px;">${required?"Enter PIN to unlock":"Set a PIN for this profile (optional)"}</div>
+        <div style="font-size:12px;color:var(--mu);margin-bottom:18px;">${subtitle}</div>
         <div class="pg-pin-row" id="pg-pin-dots">
           ${[0,1,2,3].map(i=>`<div class="pg-pin-dot" id="pgd_${i}"></div>`).join("")}
         </div>
@@ -11000,10 +11125,9 @@ document.addEventListener("keydown", e => {
         <div class="pg-numpad">
           ${[1,2,3,4,5,6,7,8,9,"","0","⌫"].map(k=>`<button class="pg-num${k==="⌫"?" del":""}" onclick="pg_numpad('${k}')">${k}</button>`).join("")}
         </div>
-        ${!required?`<button class="pg-btn pg-btn-secondary" style="margin-top:14px;" onclick="pg_skipPin('${profileId}')">Skip — No PIN</button>`:""}
+        ${!required&&!isNewDevice?`<button class="pg-btn pg-btn-secondary" style="margin-top:14px;" onclick="pg_skipPin('${profileId}')">Skip — No PIN</button>`:""}
         <button class="pg-btn pg-btn-secondary" style="margin-top:6px;" onclick="pg_back()">← Back</button>
       </div>`;
-    _pinTarget={mode:required?"verify":"set",profileId};
   }
 
   window.pg_numpad=function(k){
@@ -11036,9 +11160,22 @@ document.addEventListener("keydown", e => {
       if(hashPin(_pinBuffer)===profiles[idx].pinHash){
         _enterApp(_pinTarget.profileId);
       } else {
-        _pinBuffer="";
-        for(let i=0;i<4;i++){const d=document.getElementById("pgd_"+i);if(d)d.classList.remove("filled");}
-        if(errEl){errEl.style.display="block";errEl.textContent="Wrong PIN — try again";}
+        /* Before showing error, try fetching latest PIN from Firebase (may have changed on another device) */
+        _fetchAndMergeProfilesFromCloud().then(()=>{
+          const refreshed=getProfiles();
+          const ridx=refreshed.findIndex(p=>p.id===_pinTarget.profileId);
+          if(ridx!==-1 && hashPin(_pinBuffer)===refreshed[ridx].pinHash){
+            _enterApp(_pinTarget.profileId);
+          } else {
+            _pinBuffer="";
+            for(let i=0;i<4;i++){const d=document.getElementById("pgd_"+i);if(d)d.classList.remove("filled");}
+            if(errEl){errEl.style.display="block";errEl.textContent="Wrong PIN — try again";}
+          }
+        }).catch(()=>{
+          _pinBuffer="";
+          for(let i=0;i<4;i++){const d=document.getElementById("pgd_"+i);if(d)d.classList.remove("filled");}
+          if(errEl){errEl.style.display="block";errEl.textContent="Wrong PIN — try again";}
+        });
       }
     }
   };
@@ -11053,7 +11190,12 @@ document.addEventListener("keydown", e => {
     if(!profile) return;
     if(profile.hasPin){
       _pinBuffer="";
-      renderSetPin(profileId,true);
+      if(!profile.pinHash){
+        /* PIN required but not set on this device yet — prompt to create one */
+        renderSetPin(profileId, false, true);
+      } else {
+        renderSetPin(profileId, true);
+      }
     } else {
       _enterApp(profileId);
     }
@@ -11186,6 +11328,7 @@ document.addEventListener("keydown", e => {
     }
   }
 
+  window._renderAdminPanel = _renderAdminPanel;
   function _renderAdminPanel(pinChanged){
     const profiles=getProfiles();
     const ac=document.getElementById("pg-admin-content");
@@ -11197,7 +11340,7 @@ document.addEventListener("keydown", e => {
               <div style="font-size:13px;font-weight:800;color:var(--tx);">${p.name}</div>
               <div style="font-size:10px;color:var(--mu);">PIN: ${p.hasPin?"Set":"None"}</div>
             </div>
-            <button onclick="pg_adminResetPin('${p.id}')" style="background:#F0A50022;border:1px solid #F0A50044;border-radius:10px;padding:6px 10px;font-size:11px;font-weight:800;color:#F0A500;cursor:pointer;font-family:'Nunito Sans',sans-serif;margin-right:6px;">Reset PIN</button>
+            <button onclick="pg_adminSetPin('${p.id}','${p.name}')" style="background:#F0A50022;border:1px solid #F0A50044;border-radius:10px;padding:6px 10px;font-size:11px;font-weight:800;color:#F0A500;cursor:pointer;font-family:'Nunito Sans',sans-serif;margin-right:6px;">🔑 Change PIN</button>
             <button onclick="pg_adminDeleteProfile('${p.id}','${p.name}')" style="background:#E74C3C22;border:1px solid #E74C3C44;border-radius:10px;padding:6px 10px;font-size:11px;font-weight:800;color:#E74C3C;cursor:pointer;font-family:'Nunito Sans',sans-serif;">🗑 Delete</button>
           </div>`).join("")
       : `<div style="text-align:center;padding:20px;color:var(--mu);font-size:13px;">No profiles yet.</div>`;
@@ -11214,32 +11357,91 @@ document.addEventListener("keydown", e => {
       </div>
       <div class="pg-card">
         <div class="pg-section">Admin Settings</div>
-        <button onclick="pg_adminChangePinFlow()" style="width:100%;background:var(--cardH);border:1px solid var(--bo);border-radius:13px;padding:13px;font-size:13px;font-weight:800;color:var(--tx);cursor:pointer;font-family:'Nunito Sans',sans-serif;display:flex;align-items:center;gap:10px;margin-bottom:0;">
+        <button onclick="pg_adminChangePinFlow()" style="width:100%;background:var(--cardH);border:1px solid var(--bo);border-radius:13px;padding:13px;font-size:13px;font-weight:800;color:var(--tx);cursor:pointer;font-family:'Nunito Sans',sans-serif;display:flex;align-items:center;gap:10px;margin-bottom:10px;">
           <span style="font-size:18px;">🔑</span> Change Admin PIN
+        </button>
+        <button onclick="pg_cleanDuplicates()" style="width:100%;background:#E74C3C22;border:1px solid #E74C3C44;border-radius:13px;padding:13px;font-size:13px;font-weight:800;color:#E74C3C;cursor:pointer;font-family:'Nunito Sans',sans-serif;display:flex;align-items:center;gap:10px;">
+          <span style="font-size:18px;">🧹</span> Remove Duplicate Profiles
         </button>
       </div>`;
   }
+
+  window.pg_cleanDuplicates=function(){
+    const profiles=getProfiles();
+    /* Keep only the first occurrence of each name (case-insensitive), prefer ones with PIN set */
+    const seen=new Map();
+    profiles.forEach(p=>{
+      const key=p.name.trim().toLowerCase();
+      if(!seen.has(key)){
+        seen.set(key,p);
+      } else {
+        /* Keep whichever has a PIN set, or the existing one */
+        const existing=seen.get(key);
+        if(!existing.hasPin && p.hasPin) seen.set(key,p);
+      }
+    });
+    const cleaned=Array.from(seen.values());
+    if(cleaned.length===profiles.length){
+      alert("No duplicates found.");
+      return;
+    }
+    const removed=profiles.length-cleaned.length;
+    if(confirm(`Remove ${removed} duplicate profile(s)? This will sync to all devices.`)){
+      saveProfiles(cleaned);
+      _renderAdminPanel();
+    }
+  };
 
   window.pg_adminChangePinFlow=function(){
     _adminPinMode="change_old";
     _renderAdminPin("Change Admin PIN","Enter your current Admin PIN");
   };
 
-  window.pg_adminResetPin=function(profileId){
-    const profiles=getProfiles();
-    const idx=profiles.findIndex(p=>p.id===profileId);
-    if(idx===-1) return;
-    profiles[idx].hasPin=true;
-    profiles[idx].pinHash=hashPin("0000");
-    saveProfiles(profiles);
-    _renderAdminPanel();
+  window.pg_adminSetPin=function(profileId, profileName){
+    const ac=document.getElementById("pg-admin-content");
+    let buf="";
+    function renderDots(){ [0,1,2,3].forEach(i=>{ const d=document.getElementById("apsd_"+i); if(d) d.className="pg-pin-dot"+(i<buf.length?" filled":""); }); }
+    function handleKey(k){
+      const errEl=document.getElementById("aps-pin-err");
+      if(k==="del"){ buf=buf.slice(0,-1); renderDots(); if(errEl) errEl.style.display="none"; return; }
+      if(buf.length>=4) return;
+      buf+=k; renderDots();
+      if(buf.length===4){
+        const profiles=getProfiles();
+        const idx=profiles.findIndex(p=>p.id===profileId);
+        if(idx===-1) return;
+        profiles[idx].hasPin=true;
+        profiles[idx].pinHash=hashPin(buf);
+        saveProfiles(profiles);
+        _renderAdminPanel();
+      }
+    }
+    ac.innerHTML=`
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
+        <button onclick="_renderAdminPanel()" style="background:var(--cardH);border:1px solid var(--bo);border-radius:10px;padding:6px 12px;font-size:12px;color:var(--mu);cursor:pointer;font-family:'Nunito Sans',sans-serif;">← Back</button>
+        <div style="font-size:14px;font-weight:800;color:var(--tx);">Set PIN for ${profileName}</div>
+      </div>
+      <div style="text-align:center;padding:10px 0 20px;">
+        <div style="font-size:13px;color:var(--mu);margin-bottom:18px;">Enter new 4-digit PIN</div>
+        <div class="pg-pin-row" id="aps-pin-dots" style="justify-content:center;margin-bottom:8px;">
+          ${[0,1,2,3].map(i=>`<div class="pg-pin-dot" id="apsd_${i}"></div>`).join("")}
+        </div>
+        <div id="aps-pin-err" style="font-size:11px;color:#E74C3C;min-height:16px;margin-bottom:12px;display:none;"></div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:240px;margin:0 auto;">
+          ${[1,2,3,4,5,6,7,8,9].map(n=>`<button onclick="window._apsKey('${n}')" style="padding:16px;font-size:18px;font-weight:800;background:var(--cardH);border:1.5px solid var(--bo);border-radius:14px;color:var(--tx);cursor:pointer;font-family:'Nunito Sans',sans-serif;">${n}</button>`).join("")}
+          <div></div>
+          <button onclick="window._apsKey('0')" style="padding:16px;font-size:18px;font-weight:800;background:var(--cardH);border:1.5px solid var(--bo);border-radius:14px;color:var(--tx);cursor:pointer;font-family:'Nunito Sans',sans-serif;">0</button>
+          <button onclick="window._apsKey('del')" style="padding:16px;font-size:18px;background:var(--cardH);border:1.5px solid var(--bo);border-radius:14px;color:#E74C3C;cursor:pointer;font-family:'Nunito Sans',sans-serif;">⌫</button>
+        </div>
+      </div>`;
+    window._apsKey=handleKey;
   };
 
-  window.pg_adminDeleteProfile=function(profileId,name){
+  window.pg_adminDeleteProfile=async function(profileId,name){
     if(!confirm("Delete profile \""+name+"\"? All their data will be lost.")) return;
     let profiles=getProfiles();
     profiles=profiles.filter(p=>p.id!==profileId);
-    saveProfiles(profiles);
+    await saveProfiles(profiles);
     /* Also clear stored data for this profile */
     const keys=["hbt_cats","hbt_exp","hbt_lang","hbt_budget","hbt_noh","hbt_funds","hbt_sync_cfg","hbt_theme"];
     keys.forEach(k=>{try{localStorage.removeItem(PFX+profileId+"_"+k);}catch(e){}});
@@ -11349,31 +11551,43 @@ document.addEventListener("keydown", e => {
   }
 
   /* ── Boot ── */
-  const autoProfile=localStorage.getItem(SEL_KEY);
-  if(autoProfile){
-    const profiles=getProfiles();
-    const profile=profiles.find(p=>p.id===autoProfile);
-    if(profile){
-      if(profile.hasPin){
-        _pinBuffer="";
-        renderSetPin(autoProfile,true);
+  function _boot(){
+    /* Show loading screen while fetching profiles from Firebase */
+    content.innerHTML=`<div style="text-align:center;padding:60px 20px;">
+      <div style="font-size:36px;margin-bottom:16px;">🏠</div>
+      <div style="font-size:14px;font-weight:700;color:var(--tx);margin-bottom:8px;">Loading profiles…</div>
+      <div style="font-size:12px;color:var(--mu);">Fetching from: ${_getProfUrl().replace("https://","").split("/")[0]}</div>
+    </div>`;
+
+    _loadProfilesFromFirebase().then(()=>{
+      const autoProfile=localStorage.getItem(SEL_KEY);
+      if(autoProfile){
+        const profile=getProfiles().find(p=>p.id===autoProfile);
+        if(profile){
+          if(profile.hasPin){
+            _pinBuffer="";
+            renderSetPin(autoProfile,true);
+          } else {
+            loadProfileData(autoProfile);
+            gate.classList.add("hidden");
+            const savedTheme=localStorage.getItem("hbt_theme")||"light";
+            if(savedTheme==="light") document.body.classList.add("light");
+            else document.body.classList.remove("light");
+            const avEl2=document.getElementById("pg-topbar-avatar");
+            const nmEl2=document.getElementById("pg-topbar-name");
+            if(avEl2) avEl2.textContent=profile.avatar;
+            if(nmEl2) nmEl2.textContent=profile.name;
+          }
+        } else {
+          localStorage.removeItem(SEL_KEY);
+          _renderProfileListUI();
+        }
       } else {
-        loadProfileData(autoProfile);
-        gate.classList.add("hidden");
-        const savedTheme=localStorage.getItem("hbt_theme")||"light";
-        if(savedTheme==="light") document.body.classList.add("light");
-        else document.body.classList.remove("light");
-        const avEl2=document.getElementById("pg-topbar-avatar");
-        const nmEl2=document.getElementById("pg-topbar-name");
-        if(avEl2&&profile) avEl2.textContent=profile.avatar;
-        if(nmEl2&&profile) nmEl2.textContent=profile.name;
+        _renderProfileListUI();
       }
-    } else {
-      renderProfileList();
-    }
-  } else {
-    renderProfileList();
+    }).catch(()=>{ _renderProfileListUI(); });
   }
+  _boot();
 })();
 </script>
 </body></html>
